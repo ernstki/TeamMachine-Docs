@@ -22,7 +22,7 @@ li.tocify-item {
 
 /* Improve contrast of top nav when in not-"collapsed" state */
 .navbar.navbar-fixed-top {
-    text-shadow: 1 1 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     /*font-weight: 800;*/
 }
 
