@@ -7,3 +7,25 @@ li.tocify-item {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+/* Account for breakpoint at 991px */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+	div#preview {
+		margin-left:250px;
+	}
+	/* From bootstrap.css */
+	div.container {
+		margin-left:0;
+		margin-right:0;
+	}
+}
+
+/* Improve contrast of top nav when in not-"collapsed" state */
+.navbar.navbar-fixed-top {
+    text-shadow: 1 1 2px rgba(0,0,0,0.5);
+    /*font-weight: 800;*/
+}
+
+.navbar.navbar-fixed-top.top-nav-collapse {
+    text-shadow: none;
+}
