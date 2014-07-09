@@ -1,0 +1,9 @@
+span#title {
+	display: inline-block;
+}
+
+li.tocify-item {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
