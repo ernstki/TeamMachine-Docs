@@ -7,7 +7,7 @@
 $(function() {
 	$(function () {
 		$.ajax({
-			url: "README.md",
+			url: "Requirements.md",
 			type: "GET",
 			success: function (data) {
 				var html = marked(data);
