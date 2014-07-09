@@ -1,7 +1,6 @@
 /**
  * User: powerumc
  * Date: 2014. 5. 18.
- * Time: ������ 8:39
  */
 
 
@@ -19,10 +18,10 @@ $(function() {
 					selectors: "h1, h2, h3, h4, h5, h6",
 					showEffect: "slideDown",
 					hideEffect: "slideUp",
+					scrollTo: 55,
 					theme: "jqueryui",
 					hashGenerator: "pretty",
 					highlightOffset: 40});
-
 
 				$("code").addClass("prettyprint");
 
