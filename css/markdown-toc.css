@@ -20,7 +20,7 @@ body { padding: 10px; }
 /* Account for breakpoint at 991px */
 @media screen and (max-width: 991px) and (min-width: 768px) {
 	div#preview {
-		margin-left:225px;
+		margin-left:250px;
 	}
 	/* From bootstrap.css */
 	div.container {
