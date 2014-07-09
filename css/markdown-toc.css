@@ -17,6 +17,18 @@ body { padding: 10px; }
     border-bottom-width: 1px;
 }
 
+/* Account for breakpoint at 991px */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+	div#preview {
+		margin-left:225px;
+	}
+	/* From bootstrap.css */
+	div.container {
+		margin-left:0;
+		margin-right:0;
+	}
+}
+
 /* collapsed sidebar styles */
 @media screen and (max-width: 767px) {
     .row-offcanvas {
