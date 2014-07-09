@@ -1,7 +1,7 @@
 /**
  * User: powerumc
  * Date: 2014. 5. 18.
- * Time: 오후 8:39
+ * Time: ������ 8:39
  */
 
 
@@ -16,7 +16,7 @@ $(function() {
 
 				var toc = $("#toc").tocify({
 					context: "#preview",
-					selectors: "h1, h2, h3",
+					selectors: "h1, h2, h3, h4, h5, h6",
 					showEffect: "slideDown",
 					hideEffect: "slideUp",
 					theme: "jqueryui",
