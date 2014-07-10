@@ -314,7 +314,7 @@ Create Post
 | 14. Goal               | Public         | No       |
 | 15. Creation Date      | Public         | N/A      |
 | 16. Last Updated Date  | Public         | N/A      |
- 
+
 1. Name 
 2. Description 
 	* In depth description of the project 
@@ -366,7 +366,7 @@ Create Post
 | 7. Bio             | Public         | No       |
 | 8. Status          | Public         | Yes      |
 | 9. Previous work   | Either         | No       |
- 
+
 1. Name 
 2. Email 
 	* Signup email 
