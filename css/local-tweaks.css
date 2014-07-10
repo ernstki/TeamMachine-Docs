@@ -46,8 +46,8 @@ table
 	border-top: 2pt solid #000; /* The caption on top will not have a bottom-border */
 	 
 	/* Center */
-	margin-left: auto;
-	margin-right: auto;
+	/*margin-left: auto;
+	margin-right: auto;*/
 	}
 thead /* Entire table header */
 	{
