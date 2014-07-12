@@ -48,61 +48,116 @@ The objectives of the TeamMachine project are to:
 \* _Stretch goals: only if primary functionality is implemented ahead of
     schedule_
 
-### Definitions, Acronyms, and Abbreviations
-1. __JSON__: _JavaScript Object Notation_
-2. __REST__: _Representational State Transfer_
-3. __API__: _Application Programmer Interface_
-
 ### References
 1. _Object Oriented Software Engineering Using UML, Patterns, and Java_, 3rd
    ed., Bernd Bruegge and Allen H. Dutoit
 
-### Overview
-
-
 ## Current System
 
+There is currently no single industry-leading service which provides a
+collaborative platform for creators seeking to recruit others to help with
+their projects. At the moment, creators are using a variety of different
+services to meet the collective needs which we intend to provide with
+TeamMachine.
+
+Examples:
+* Google Chat, GroupMe, HipChat, Campfire, and other IM services for
+  real-time group collaboration
+* Dropbox, Box.net, Google Drive for file sharing
+* Facebook, Twitter, LinkedIn for social networking and outreach
+* [Kickstarter](https://www.kickstarter.com/),
+  [Indiegogo](https://www.indiegogo.com/) for crowdfunding and payment
+  processing
+* [Freelancer.com](http://www.freelancer.com/),
+  [oDesk](https://www.odesk.com/) (and many others) for
+  hiring freelancers for small projects
+* [Duet](https://duetapp.com/), [Asana](https://asana.com/),
+  [Basecamp](https://basecamp.com/) (and many others) for project management
+
+Separately, these services will exceed TeamMachine's
+capabilities for file sharing, business-related networking, job postings,
+hiring freelancers, and social media outreach. However, these services have
+not yet been implemented in a unified way as a single online service, with
+a central sign-on and permissions management.
 
 ## Proposed System
 
 ### Overview
+We believe TeamMachine will differentiate itself on the market by providing
+a unified platform for makers, creators, and entrepreneurs to come together
+on and eventually bring to market hardware and software products, as well as
+artistic and civic collaborations.
+
+### Definitions, Acronyms, and Abbreviations
+#### Acronyms Used in This Document
+1. __JSON__: _JavaScript Object Notation_
+2. __REST__: _Representational State Transfer_
+3. __API__: _Application Programmer Interface_
+
+#### TeamMachine Vocabulary
+1. __Project__: the central focus of the TeamMachine site; a collaborative
+   effort to produce some desired end result, which may be a hardware or
+   software product, a work of physical or performance art, or a civic
+   activity
+2. __User/Member__: a person who uses the TeamMachine mobile app or web site
+   while signed in to a registered account; a collaborator on an existing
+   project
+3. __Profile__: a collection of information about a User which lists some
+   biographical information as well as a list of past projects and
+   competencies
+4. __Skill__: an area of emphasis or competency for which a project leader
+   is seeking collaborators; an area of focus or competency which a User
+   lists in his or her Profile
+5. __Project Admin/Owner/Leader__: the User in charge of accepting
+   applications to his or her project and assigning responsibilities to
+   project Members
+5. __Role__: a delegation of resposibilities by the Project Owner to
+   Members of the project
 
 ### Functional Requirements
 
-The Android mobile device application should provide the following functionality: 
+The mobile device application will be the primary "point of entry"
+for new users of the TeamMachine service. Initially, the Android platform
+(over 70% <!--check this figure--> of the smartphone market) will be the
+primary target for development of the mobile application. The Android app
+should provide the following functionality:
 
-* __Search for projects__
+* __Search__
     * User must be able to search for Projects by any of the following criteria:
-		* Project Name 
-		* Project Location 
-		* Stage of Project 
-			* Working 
-			* Not Started 
-			* Finished 
-		* Skills Required by project 
-		* If the project has open roles (_i.e._, the project is "Hiring")
-		* Type of project: Software Application, Website, robotics, etc.. 
-		* Members/Owner 
-		* Age 
-		* Project creation date 
-		* Last Used 
-		* Group Size 
+        * Project name 
+        * Project location 
+        * Stage of project: Working, Not Started, Completed, (Archived)
+        * Skills required by project 
+        * If the project has open roles and is seeking collaborators
+        * Type of project: software application, web site, robotics experiment,
+          etc.
+        * Project members and project leader
+        * Age: how long the project has been established and progressing
+          toward completion
+        * Project creation date 
+        * Last Used 
+        * Group Size 
+    * User must be able to search for other Users by any of the following
+      criteria:
+       * Geographic location/proximity: in a ZIP code or municipality, or
+         within a certain radius of the User's location
 
-* __View project__
-User must be able to apply for projects 
-Users must be able to view detailed information about the project, including but not limited to: 
-Project Name  
-Project Location 
-Project Events 
-Project Members 
-Project Roles 
-Both available and filled  
-Project Description 
-Project Type 
-Project Skills 
-Goal of the Project 
-Application must support "Apply" functionality 
-The Project Admin must be notified when an application is submitted 
+* __View and apply to Projects__
+    * User must be able to apply for projects 
+    * Users must be able to view detailed information about the project,
+      including but not limited to:
+        * Project Name  
+        * Project Location 
+        * Project Events 
+        * Project Members 
+        * Project Roles 
+        * Both available and filled  
+        * Project Description 
+        * Project Type 
+        * Project Skills 
+        * Goal of the Project 
+    * Application must support "Apply" functionality 
+        * The Project Admin must be notified when an application is submitted 
 Users must be able to watch/follow projects 
  
 Comments: 
@@ -317,40 +372,40 @@ Create Post
 
 1. Name 
 2. Description 
-	* In depth description of the project 
+        * In depth description of the project 
 3. Brief Description 
-	* Description given when viewed from search 
-		* If not given the first x characters will be taken from Description for this field 
+        * Description given when viewed from search 
+                * If not given the first x characters will be taken from Description for this field 
 4. Skills needed in the projects 
 5. Project Roles  
 6. Project Location 
-	* The general location the project will be worked on.
-		* Given at a city level 
+        * The general location the project will be worked on.
+                * Given at a city level 
 7. Project Status 
-	* Not Started, Working, Complete 
+        * Not Started, Working, Complete 
 8. Project Events 
-	* Events related to the project 
-	* See also: Events fields 
+        * Events related to the project 
+        * See also: Events fields 
 9. Rating 
-	* The user given rating of the project 
-	* The rating is not set but gathered over time 
+        * The user given rating of the project 
+        * The rating is not set but gathered over time 
 10. General Type 
-	* The general category that the project belongs to 
-		* Hardware, Software, etc.. 
+        * The general category that the project belongs to 
+                * Hardware, Software, etc.. 
 11. Sub Type 
-	* More detailed type. 
-		* C++ Applications, Webserver, etc… 
+        * More detailed type. 
+                * C++ Applications, Webserver, etc… 
 12. Members 
 13. Project Lead/ Admin 
 14. Goal 
-	* General goal of the project. 
-		* "We want to learn what goes into building a Web server" 
-		* "We want to produce an application that produced revenue" 
-		* "It's for a school project and we need X expertise" (e.g., DAAP/CEAS collaborations) 
+        * General goal of the project. 
+                * "We want to learn what goes into building a Web server" 
+                * "We want to produce an application that produced revenue" 
+                * "It's for a school project and we need X expertise" (e.g., DAAP/CEAS collaborations) 
 15. Creation Date 
-	* The date the project was created 
+        * The date the project was created 
 16. Last updated date 
-	* The last date when the project was updated  
+        * The last date when the project was updated  
 
 
 ##### "Profile" Object Fields
@@ -369,48 +424,48 @@ Create Post
 
 1. Name 
 2. Email 
-	* Signup email 
+        * Signup email 
 3. Location 
-	* Location of user 
+        * Location of user 
 4. Skills 
-	* The skills of the user 
-	* Will have a level associated with them 
+        * The skills of the user 
+        * Will have a level associated with them 
 5. Profile Picture  
 6. Projects Joined 
-	* A list of all the projects the user has joined 
-	* Must be part of the project for at least x% of the project life for it to show up 
+        * A list of all the projects the user has joined 
+        * Must be part of the project for at least x% of the project life for it to show up 
 7. Bio 
-	* Description of the user, similar to resume skills list
+        * Description of the user, similar to resume skills list
 8. Status 
-	* The status of the users project hunt 
-	* Looking for project, Not looking for project, etc… 
+        * The status of the users project hunt 
+        * Looking for project, Not looking for project, etc… 
 9. Previous work done by the user 
-	* Any work the user wants to share on their profile 
+        * Any work the user wants to share on their profile 
  
 ##### "Role" Object Fields
 1. Name/Job Title 
-	* The name or title of the role  
+        * The name or title of the role  
 2. Description 
-	* A brief description of the role and what it entails  
+        * A brief description of the role and what it entails  
 3. Skills Required 
-	* The skills that will be required of the user to fill this role  
+        * The skills that will be required of the user to fill this role  
 4. Duties/Responsibilities 
-	* What the user will be doing if they take this role 
-	* Should be detailed  
+        * What the user will be doing if they take this role 
+        * Should be detailed  
 5.  Filled 
-	* If the role is filled or not 
+        * If the role is filled or not 
 6. Filled by 
-	* Whom the role is filled by 
-	
+        * Whom the role is filled by 
+        
 ##### "Skill" Object Fields
 
 1. Name 
-	* The name of the skill  
+        * The name of the skill  
 2. Description 
-	* Very brief description of the skill 
+        * Very brief description of the skill 
 3. Level of expertise  
-	* Level of expertise with the skill
-	
+        * Level of expertise with the skill
+        
 ##### "Events" Object Fields
 Field Name, Public/Private, Required 
 Name, Public,  Yes 
@@ -425,19 +480,19 @@ Last Updated Date Public N/A
 
 1. Name 
 2. Description 
-	* In depth description of the event 
+        * In depth description of the event 
 3. Location 
-	* Where will project members meet for the event (online or IRL) 
+        * Where will project members meet for the event (online or IRL) 
 4. Status 
-	* Completed (archived; do not show in "basic" search results) 
+        * Completed (archived; do not show in "basic" search results) 
 5. Event type 
-	* Social or work oriented 
+        * Social or work oriented 
 6. Attendance 
-	* Members-only (private, registration required) 
-	* Open attendance 
-	* Entrance fee/cover? 
+        * Members-only (private, registration required) 
+        * Open attendance 
+        * Entrance fee/cover? 
 7. Event Coordinator 
-	* Point of contact for directions, registering for event, what to bring 
+        * Point of contact for directions, registering for event, what to bring 
 8. Creation/Last Updated Dates 
 
 #### Dynamic Model
