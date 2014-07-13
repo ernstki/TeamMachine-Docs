@@ -225,48 +225,84 @@ Users must be able to add other users to fill a role
 
 ### Non-functional Requirements
 
-
-Use Restful APIs for back end 
-Profile emphasizes skills and project history  
-Project owners should feel like they are hiring competent people 
-Profile images  should be encouraged to professional  
-Application should be made on Android 
-Application should place notifications in the notification bar 
-UI should look and feel professional  
-Allow users to use their own email program 
-Application should be easily navigated 
-
-Every page should be able to be gotten to from anywhere in as few possible
-clicks as possible
+_Note that a web-front end (a publicly accessible web site where project
+owners can manage their projects) is __not__ considered an initial goal of
+the first iteration of the TeamMachine service._
 
 #### Usability
+* Profiles on the service should emphasize credibility by showing skills
+  and project history
+* Project owners should feel like they are hiring competent people 
+* Every page should be accessible to from anywhere within the interface in
+* as few possible clicks/taps as possible
+* Profile images should be encouraged to professional
 
 #### Reliability
+* Project should be hosted on a scalable infrastructure which anticipates
+  very large scale growth in a short period of time
+* Project should have monitoring and notification systems in place to
+  inform developers of problems and downtime
 
 #### Performance
+* Search functionality should be prominent and easily accessible in both the
+  Android and web interfaces
+* The mobile application should be easily navigated with the fewest clicks
+  possible
+* The web front end should utilize Ajax to push page "fragments" rather
+  than whole page updates, and maximize the use of browser cache and HTML5
+  offline storage APIs to improve responsiveness and resiliency to periods
+  of disconnected use
 
 #### Supportability
+* Application should be develooped on Android and target the widest range of
+  form factors and screen sizes possible
+* Allow users to use their own email program for project messaging
 
 #### Implementation
+* The mobile application should work on the widest range of current-generation
+  Android devices possible (Android 3.x and up)
+* The back end should utilize RESTful APIs to allow for future integrations
+  and third-party hooks
 
 #### Interface
-
-#### Packaging
+* The application UI and web site should look and feel professional  
+* The mobile application should place notifications in the notification bar
+  and/or lock screen for the targeted mobile platform(s)
 
 #### Legal
+* Service should have clear legal guidelines on who retains copyright to
+  creative works submitted to the service
+* Service should encourage works of software to be submitted under an
+  [OSI-approved open source license](http://opensource.org/licenses/);
+  documentation and other creative works should be encouraged to use
+  [Creative Commons](http://creativecommons.org/licenses/) or
+  [GNU FDL](https://gnu.org/licenses/fdl.html); allow "all rights reserved"
+  copyright assignment as an optional fallback
+* Service should have clear stipulations about privacy and disclosure of
+  user data or personally-identifying information to law enforcement or
+  other authorities
 
-### Secondary Requirements ("Stretch Goals")
+### Secondary Requirements
+
+The following requirements are considered "stretch goals" which are only to
+be undertaken if primary goals are on schedule for completion in the required
+time frame.
+
+#### Data Export
+* Users should be able to export their project data (membership, contact
+  information, role assignments, shared files, communications logs) in an
+  accessible format should they desire to leave the service at any time
 
 #### Messaging 
 Users must be able to contact other users 
-
 1. IM 
 2. Private messaging 
 3. Group Mailing lists (address to mail to) 
 4. auto-completing @-replies in comment/discussion areas on the site
 
 #### Create a project 
-After creating a project, 'Tinder' style matching for requesting participants to join the project 
+After creating a project, 'Tinder' style matching for requesting
+participants to join the project
 
 1. Swipe Left, Right style 
 2. Not deep review of users   
@@ -274,8 +310,9 @@ After creating a project, 'Tinder' style matching for requesting participants to
 #### Activity Feed 
 Follow other users, view their project participation 
 
-#### Achievements!!!  
-See the Mozilla OpenBadges project: https://wiki.mozilla.org/Badges and http://openbadges.org/ 
+#### Achievements
+* An achievement system may be put in place to encourage user engagement
+  and increase retention; see [Mozilla OpenBadges](http://openbadges.org/)
 
 #### Project Management 
 1. Delegate Roles 
@@ -499,7 +536,7 @@ Last Updated Date Public N/A
 
 #### User Interface
 
-## Glossary
+<!-- ## Glossary -->
 
 
 ## Credits
