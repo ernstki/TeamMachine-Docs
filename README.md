@@ -1,6 +1,9 @@
 # TeamMachine Project Documentation
 
 A somewhat-finalized requirements document for the TeamMachine project
+incorporating all class contributions from the EECE3093C
+[OneNote notebook](https://onedrive.live.com/redir?page=view&resid=A04B9C560C4F6BE2!132&authkey=!AD91xRhC2zNNWtw)
+and UMLet [UML diagrams](https://db.tt/S6dUVvHP).
 
 ## Credits
 The HTML version of this document makes use of Junil Um's
