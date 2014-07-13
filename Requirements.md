@@ -1,9 +1,9 @@
 # TeamMachine
 A Tool for Connected Collaboration
 
-_If you are reading a printed or PDF version of this document, the current
-online version may be found at http://bit.ly/teammachine-reqs (UC LDAP login
-may be required)._
+_If you are reading a printed or [PDF version](TM_Requirements.pdf) of this
+document, the current online version may be found at
+http://bit.ly/teammachine-reqs (UC LDAP login may be required)._
 
 ## Introduction
 In today's fast paced world, it can be very challenging to network and meet
@@ -393,48 +393,62 @@ following options:
 #### Use Case Model
 
 ##### Primary Use Cases
-![Create a Profile Use Case](img/use_cases/create_profile.png)
 
-Create Project 
+###### Create a Profile
+![Create a profile use case](img/use_case/use-create_profile.png)
 
-Apply/Join Project 
+###### Create a Project
 
-Hire for Project 
+###### Search for and Apply to a Project
+![Search and apply to a project use case](img/use_case/use-searchapply_proj.png)
 
-Search for Project 
+###### Hire User(s) for Project 
+![Search for users and hire for project use case](img/use_case/use-hire.png)
 
-Search for User 
+<!-- Search for Project: see "Search for and Apply.." above -->
 
-View Project 
+###### Search for User
+![Search user profiles use case](img/use_case/use-search_profiles.png)
 
-View Profile 
+###### View Project
+![View project use case](img/use_case/use-view_project.png)
 
-Edit Profile 
+###### View Profile 
+![View profile use case](img/use_case/use-view_profile.png)
 
-Edit Project 
+###### Edit Profile 
+![Edit user profile use case](img/use_case/use-edit_profile.png)
 
-Create Project Role 
+###### Edit Project 
+![Edit project use case](img/use_case/use-edit_project.png)
+
+###### Create Project Role 
  
+
 ##### Secondary Use Cases
-Contact User From Profile Page 
-Contact User From Project Page 
-Events 
-Export calendars 
-Subscribe to a project   
-Rate a Project 
-Thump up/down 
-Project owner feedback 
-When can users vote 
-Forum Use Cases 
-View Post 
-Search Posts 
-Create Post
+_These are "stretch goals" which are not primary aims of the first iteration
+of the TeamMachine product._
+
+* Contact User from Profile Page 
+* Contact User from Project Page 
+* Add/Modify Events 
+* Export Calendars 
+* Subscribe to a Project / Follow a User
+* Rate a Project 
+* Thumbs-up/down post or comment
+* Give Feedback to Project Owner
+* Vote (on Project Decisions)
+* Forum Use Cases 
+    * View Post 
+    * Search Posts 
+    * Create Post
 
 #### Object Model
 
-![TeamMachine class overview diagram](img/class/solution_domain.png)
+![TeamMachine class overview diagram](img/class/class-overview.png)
 
-##### "Project" Object Fields
+##### Project Object Fields
+
 |     Field Name         | Public/Private | Required |
 |------------------------|----------------|----------|
 |  1. Name               | Public         | Yes      | 
@@ -491,13 +505,13 @@ Create Post
 16. Last updated date 
     * The last date when the project was updated  
 
-##### "Profile" Object Fields
+##### Profile Object Fields
 
 |    Field Name      | Public/Private | Required |
 |--------------------|----------------|----------|
 | 1. Name            | Public         | Yes      |
 | 2. Email           | Either         | Yes      |
-| 3. Location        | Either         | "No      |
+| 3. Location        | Either         | No       |
 | 4. Skills          | Public         | No       |
 | 5. Profile Picture | Public         | No       |
 | 6. Projects Joined | Either         | N/A      |
@@ -525,7 +539,7 @@ Create Post
 9. Previous work done by the user 
     * Any work the user wants to share on their profile 
  
-##### "Role" Object Fields
+##### Role Object Fields
 
 |    Field Name               | Public/Private         | Required |
 |-----------------------------|------------------------|----------|
@@ -550,7 +564,7 @@ Create Post
 6. Filled by 
     * Whom the role is filled by 
 
-##### "Skill" Object Fields
+##### Skill Object Fields
 
 |    Field Name         | Public/Private        | Required |
 |-----------------------|-----------------------|----------|
@@ -565,7 +579,7 @@ Create Post
 3. Level of expertise  
     * Level of expertise with the skill
 
-##### "Events" Object Fields
+##### Event Object Fields
 
 |    Field Name        | Public/Private                                      | Required                    |
 |----------------------|-----------------------------------------------------|-----------------------------|
@@ -598,14 +612,27 @@ Create Post
 9. Updated Date
 
 #### Dynamic Model
-TODO: Activity diagrams here.
+##### Overview
+![Overview activity diagram](img/activity/act-overview.png)
+
+##### Activity Diagrams
+###### Create a Project Workflow
+![Create a project activity](img/activity/act-create_project.png)
+
+###### Find and Add Team Members Workflow
+![Find/add teammates activity](img/activity/act-findadd_teammates.png)
+
+###### Hire a User Workflow
+![Hire a user activity](img/activity/act-hire.png)
+
 
 #### User Interface
-![Version 1 of Android profile and search UI](img/android_ui/profile_and_search_ui.png)
 
-* [Version 2 of Android profile UI](img/android_ui/profile_ui.png)
-* [Android project view UI](img/android_ui/project_ui.png)
-* [Android sidebar menu UI](img/android_ui/sidebar_ui.png)
+![Version 1 of Android profile and search UI](img/ui/android/ui-profile_and_search.png)
+
+* [Version 2 of Android profile UI](img/ui/android/ui-profile.png)
+* [Android project view UI](img/ui/android/ui-project.png)
+* [Android sidebar menu UI](img/ui/android/ui-sidebar.png)
 
 <!-- ## Glossary -->
 
@@ -618,11 +645,6 @@ Greg Franko,
 The PDF version of this document was created with John MacFarlane's
 [Pandoc](http://johnmacfarlane.net/pandoc/index.html) document processing
 system.
-
-* [Version 2 of Android profile UI](img/android_ui/profile_ui.png)
-* [Android project view UI](img/android_ui/project_ui.png)
-* [Android sidebar menu UI](img/android_ui/sidebar_ui.png)
-
 
 <!-- Vim modeline; please don't remove
  vim: tw=78 sw=4 ts=4 expandtab filetype=markdown
