@@ -1,3 +1,5 @@
 .*~
+# Eclipse GFM Markdown previewer temp files
+.*.md.html
 .*.swp
 .settings/**

@@ -11,10 +11,6 @@ html {
     height: 100%;
 }
 
-table {
-	margin: 1.5em 0;
-}
-
 /*@media(min-width:767px) {
     p {
         margin: 0 0 35px;

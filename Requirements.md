@@ -357,15 +357,26 @@ Forum points (Achievements!)
 
 ##### Primary Use Cases
 Create Profile 
+
 Create Project 
+
+
 Apply/Join Project 
+
 Hire for Project 
+
 Search for Project 
+
 Search for User 
+
 View Project 
+
 View Profile 
+
 Edit Profile 
+
 Edit Project 
+
 Create Project Role 
  
 ##### Secondary Use Cases
@@ -385,7 +396,7 @@ Create Post
 
 #### Object Model
 
-![TeamMachine class diagram](img/solution_domain_class_diagram.png)
+![TeamMachine class diagram](img/class/solution_domain.png)
 
 ##### "Project" Object Fields
 |     Field Name         | Public/Private | Required |
@@ -409,41 +420,40 @@ Create Post
 
 1. Name 
 2. Description 
-        * In depth description of the project 
+    * In depth description of the project 
 3. Brief Description 
-        * Description given when viewed from search 
-                * If not given the first x characters will be taken from Description for this field 
+    * Description given when viewed from search 
+        * If not given the first x characters will be taken from Description for this field 
 4. Skills needed in the projects 
 5. Project Roles  
 6. Project Location 
-        * The general location the project will be worked on.
-                * Given at a city level 
+    * The general location the project will be worked on.
+        * Given at a city level 
 7. Project Status 
-        * Not Started, Working, Complete 
+    * Not Started, Working, Complete 
 8. Project Events 
-        * Events related to the project 
-        * See also: Events fields 
+    * Events related to the project 
+    * See also: Events fields 
 9. Rating 
-        * The user given rating of the project 
-        * The rating is not set but gathered over time 
+    * The user given rating of the project 
+    * The rating is not set but gathered over time 
 10. General Type 
-        * The general category that the project belongs to 
-                * Hardware, Software, etc.. 
+    * The general category that the project belongs to 
+        * Hardware, Software, etc.. 
 11. Sub Type 
-        * More detailed type. 
-                * C++ Applications, Webserver, etc… 
+    * More detailed type. 
+        * C++ Applications, Webserver, etc… 
 12. Members 
 13. Project Lead/ Admin 
 14. Goal 
-        * General goal of the project. 
-                * "We want to learn what goes into building a Web server" 
-                * "We want to produce an application that produced revenue" 
-                * "It's for a school project and we need X expertise" (e.g., DAAP/CEAS collaborations) 
+    * General goal of the project. 
+        * "We want to learn what goes into building a Web server" 
+        * "We want to produce an application that produced revenue" 
+        * "It's for a school project and we need X expertise" (e.g., DAAP/CEAS collaborations) 
 15. Creation Date 
-        * The date the project was created 
+    * The date the project was created 
 16. Last updated date 
-        * The last date when the project was updated  
-
+    * The last date when the project was updated  
 
 ##### "Profile" Object Fields
 
@@ -461,83 +471,101 @@ Create Post
 
 1. Name 
 2. Email 
-        * Signup email 
+    * Signup email 
 3. Location 
-        * Location of user 
+    * Location of user 
 4. Skills 
-        * The skills of the user 
-        * Will have a level associated with them 
+    * The skills of the user 
+    * Will have a level associated with them 
 5. Profile Picture  
 6. Projects Joined 
-        * A list of all the projects the user has joined 
-        * Must be part of the project for at least x% of the project life for it to show up 
+    * A list of all the projects the user has joined 
+    * Must be part of the project for at least x% of the project life for it to show up 
 7. Bio 
-        * Description of the user, similar to resume skills list
+    * Description of the user, similar to resume skills list
 8. Status 
-        * The status of the users project hunt 
-        * Looking for project, Not looking for project, etc… 
+    * The status of the users project hunt 
+    * Looking for project, Not looking for project, etc… 
 9. Previous work done by the user 
-        * Any work the user wants to share on their profile 
+    * Any work the user wants to share on their profile 
  
 ##### "Role" Object Fields
+
+|    Field Name               | Public/Private         | Required |
+|-----------------------------|------------------------|----------|
+| 1. Name/Job Title           | Public                 | Yes      |
+| 2. Description              | Public                 | Yes      |
+| 3. Skills Required          | Public                 | No       |
+| 4. Duties/Responsibilities  | Public                 | Yes      |
+| 5. Filled                   | Public                 | Yes      |
+| 6. Filled by                | Private to non-members | No       |
+
 1. Name/Job Title 
-        * The name or title of the role  
+    * The name or title of the role  
 2. Description 
-        * A brief description of the role and what it entails  
+    * A brief description of the role and what it entails  
 3. Skills Required 
-        * The skills that will be required of the user to fill this role  
+    * The skills that will be required of the user to fill this role  
 4. Duties/Responsibilities 
-        * What the user will be doing if they take this role 
-        * Should be detailed  
+    * What the user will be doing if they take this role 
+    * Should be detailed  
 5.  Filled 
-        * If the role is filled or not 
+    * If the role is filled or not 
 6. Filled by 
-        * Whom the role is filled by 
-        
+    * Whom the role is filled by 
+
 ##### "Skill" Object Fields
 
+|    Field Name         | Public/Private        | Required |
+|-----------------------|-----------------------|----------|
+| 1. Name               | Public                | Yes      |
+| 2. Description        | Public                | Yes      |
+| 3. Level of Expertise | Public                | No       |
+
 1. Name 
-        * The name of the skill  
+    * The name of the skill  
 2. Description 
-        * Very brief description of the skill 
+    * Very brief description of the skill 
 3. Level of expertise  
-        * Level of expertise with the skill
-        
+    * Level of expertise with the skill
+
 ##### "Events" Object Fields
-Field Name, Public/Private, Required 
-Name, Public,  Yes 
-Description, Both (default to "private" for members-only events), Yes
-Location, Both (default to "private" for members-only events), Yes 
-Status Public Yes 
-Event Type Public Yes 
-Attendance Public Yes (but default to "open") 
-Event Coordinator Both (default to "private" for members-only events) Yes 
-Creation Date Public N/A 
-Last Updated Date Public N/A 
+
+|    Field Name        | Public/Private                                      | Required                    |
+|----------------------|-----------------------------------------------------|-----------------------------|
+| 1. Name              | Public                                              | Yes                         |
+| 2. Description       | Both (default to "private" for members-only events) | Yes                         |
+| 3. Location          | Both (default to "private" for members-only events) | Yes                         |
+| 4. Status            | Public                                              | Yes                         |
+| 5. Event Type        | Public                                              | Yes                         |
+| 6. Attendance        | Public                                              | Yes (but default to "open") |
+| 7. Event Coordinator | Both (default to "private" for members-only events) | Yes                         |
+| 8. Creation Date     | Public                                              | N/A                         |
+| 9. Last Updated Date | Public                                              | N/A                         |
 
 1. Name 
 2. Description 
-        * In depth description of the event 
+    * In depth description of the event 
 3. Location 
-        * Where will project members meet for the event (online or IRL) 
+    * Where will project members meet for the event (online or IRL) 
 4. Status 
-        * Completed (archived; do not show in "basic" search results) 
+    * Completed (archived; do not show in "basic" search results) 
 5. Event type 
-        * Social or work oriented 
+    * Social or work oriented 
 6. Attendance 
-        * Members-only (private, registration required) 
-        * Open attendance 
-        * Entrance fee/cover? 
+    * Members-only (private, registration required) 
+    * Open attendance 
+    * Entrance fee/cover? 
 7. Event Coordinator 
-        * Point of contact for directions, registering for event, what to bring 
-8. Creation/Last Updated Dates 
+    * Point of contact for directions, registering for event, what to bring 
+8. Creation Date
+9. Updated Date
 
 #### Dynamic Model
 
 #### User Interface
 
 <!-- ## Glossary -->
-
 
 ## Credits
 The HTML version of this document makes use of Junil Um's
