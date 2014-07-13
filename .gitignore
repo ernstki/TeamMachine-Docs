@@ -4,3 +4,9 @@
 .*.swp
 .settings/**
 .DS_Store
+# Refuse left behind by pdflatex
+*.aux
+*.log
+*.out
+*.toc
+*.tex

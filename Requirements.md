@@ -65,24 +65,30 @@ services to meet the collective needs which we intend to provide with
 TeamMachine.
 
 Examples:
+
 * Google Chat, GroupMe, HipChat, Campfire, and other IM services for
   real-time group collaboration
 * Dropbox, Box.net, Google Drive for file sharing
 * Facebook, Twitter, LinkedIn for social networking and outreach
-* [Kickstarter](https://www.kickstarter.com/),
-  [Indiegogo](https://www.indiegogo.com/) for crowdfunding and payment
-  processing
-* [Freelancer.com](http://www.freelancer.com/),
-  [oDesk](https://www.odesk.com/) (and many others) for
-  hiring freelancers for small projects
-* [Duet](https://duetapp.com/), [Asana](https://asana.com/),
-  [Basecamp](https://basecamp.com/) (and many others) for project management
+* [Kickstarter], [Indiegogo] for crowdfunding and payment processing
+* [Freelancer.com], [oDesk] (and many others) for hiring freelancers for small
+  projects
+* [Duet], [Asana], [Basecamp] (and many others) for project management
 
 Separately, these services will exceed TeamMachine's
 capabilities for file sharing, business-related networking, job postings,
 hiring freelancers, and social media outreach. However, these services have
 not yet been implemented in a unified way as a single online service, with
 a central sign-on and permissions management.
+
+[Kickstarter]: https://www.kickstarter.com/
+[Indiegogo]: https://www.indiegogo.com/
+[Freelancer.com]: http://www.freelancer.com/
+[oDesk]: https://www.odesk.com/
+[Duet]: https://duetapp.com/
+[Asana]: https://asana.com/
+[Basecamp]: https://basecamp.com/
+
 
 ## Proposed System
 
