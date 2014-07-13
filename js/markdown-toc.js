@@ -40,24 +40,35 @@ $(function() {
                 // Activate colorbox for a.colorbox anchors:
                 $('a.popupimg').each(function() {
                     $(this).colorbox({
-                        maxWidth:'100%',
-                        maxHeight:'100%',
-                        title:'Viewing \'' + $(this).prop('title') + '.\' Press ESC to close.'
+                        maxWidth:'100%', maxHeight:'100%', width:'75%',
+                        //title:'Viewing \'' + $(this).prop('title') + '.\' Press ESC to close.'
+                        title:$(this).prop('title') + ' (press ESC to close)'
                     });
                     // Now wrap with HTML5 figure tags and add a figcaption:
-                    $(this).wrap('<figure>');
-                    $(this).after('<figcaption>' + $(this).prop('title') + '</figcaption>');
-                });
-               
-                // Create colorbox galleries for ul.gallery's:
-                $('ul > li > a').each(function() {
-                    $(this).colorbox({
-                        maxWidth:'100%',
-                        maxHeight:'100%',
-                        title:'Viewing \'' + $(this).text() + '.\' Press ESC to close.' 
-                    });
+                    $(this).wrap('<figure>')
+                           .after('<figcaption>' + $(this).prop('title') + '</figcaption>');
                 });
                 
+                // Create colorbox galleries for ul > li > a's containing imgs
+                // grouping them into separate galleries for each ul.
+                var gid=1;
+                $('div#preview > ul').each(function() {
+                    var is_img_list = false;
+                    $(this).children().children('a').each(function() {
+                        if( !$(this).prop('href').match(/\.png|\.jpg/) ) {
+                            return;
+                        }
+                        is_img_list = true;
+                        $(this).attr('rel', 'group'+gid);
+                        $(this).colorbox({ // FIXME: DRY
+                            maxWidth:'100%', maxHeight:'100%', width:'75%',
+                            //title:'Viewing ʻ' + $(this).text() + '.\' Press ESC to close.'
+                            title:$(this).text() + ' (press ESC to close)'
+                        });
+                    });
+                    is_img_list && gid++;
+                });
+
                 
                 $("code").addClass("prettyprint");
                 prettyPrint();

@@ -1,5 +1,9 @@
 # TeamMachine
-## A Tool for Connected Collaboration
+A Tool for Connected Collaboration
+
+_If you are reading a printed or PDF version of this document, the current
+online version may be found at http://bit.ly/teammachine-reqs (UC LDAP login
+may be required)._
 
 ## Introduction
 In today's fast paced world, it can be very challenging to network and meet
@@ -158,70 +162,83 @@ should provide the following functionality:
         * Goal of the Project 
     * Application must support "Apply" functionality 
         * The Project Admin must be notified when an application is submitted 
-Users must be able to watch/follow projects 
+    * Users must be able to watch/follow projects (stretch goal)
+        * Notifications: when a position opens or project changes state 
+            * New events
+            * Registration deadline extended
+            * Open positions
  
-Comments: 
-Notifications: when an opening happens 
-     project changes state 
-Expand on registration dead-line 
-Hiring Flag 
- 
-Create project 
-Users must be able to create projects  
-Everything in Manage project 
-Manage Project 
-PM must be able to accept/deny other user project join application 
-Profiles should show some kind of feedback from previous PM's, not visible elsewhere 
-If accepted, automatically added to group 
-Users must be able to edit their projects 
-Users must be able to create events for their projects 
-Projects must support both private and public fields 
-Every Item under every field must be able to be marked public or private, except for 
-Name 
-Description 
-Skills 
-Type 
-Rating 
-Location 
-Private fields will be viewed as a non-matching for any search 
-Users should be to invite participants directly  
-Delete Project 
-Close/Finish Project 
-Search for profile 
-Users must be able to search for other users by criteria 
-Including but not limited to: 
-Skills 
-Location 
-Name 
- Status (activity diagram calls this "other metadata") 
-Looking to join a project (LFP) 
-Completely free 
-Not looking for projects 
-Etc.. 
- 
-Star/Watch User: (Stretch Goal) 
-Notifies when they join project/ create project 
-View profile 
-Users must be able to view profile details for other users 
-Profiles should show the number of projects done with a given skill  
-Profiles should showcase previous work as much as possible (non-functional ) 
-Users must be able to contact other users 
-Email 
-Edit Profile 
-Users must be able to edit their profiles 
-Users should give a "level" to their skills  
-Users should be able to make their profiles private (invite only) or searchable 
-Create Profile 
-Users must be able to create their profile from the app 
-ALL OF EDIT PROFILE 
-Project Roles 
-Users will be able to add roles to their projects 
-Roles will contain 
-A name 
-Skills required to fill the role 
-A description of the role 
-Be able to be filled by a user 
-Users must be able to add other users to fill a role 
+* __Create Projects__
+    * Users must be able to create projects  
+    * Everything in Manage Project 
+
+* __Manage Projects__
+    * Project owners must receive notifications of user applications
+    * Project owners must be able to accept/deny applications
+    * User Profiles (or Activity Stream) should show feedback when a user's
+      own applications are accepted/denied
+        * If accepted, user is automatically added to Project
+    * Project owners must be able to edit their projects 
+    * Project owners (or delegates; _see Roles_) must be able to create events
+      for their projects
+    * Projects must support both private and public fields 
+        * Every Item under every field must be able to be marked public or
+          private, except for:
+            * Name
+            * Description
+            * Skills
+            * Type
+            * Rating
+            * Location 
+        * Private fields will not match any search
+    * Users should be to invite participants directly  
+    * Project owners should be able to delete their own Project
+    * Project owners should be able to close/finish project 
+        * Optionally (or automatically) "archive" the project, hiding it from
+          basic search results
+
+* __Search for Profiles__
+    * Users must be able to search for other users by criteria, including but
+      not limited to:
+        * Skills 
+        * Location 
+        * Name 
+        * Status ("other metadata") 
+            * Looking to join a project
+            * Completely free 
+            * Not looking (inactive)
+    * Star/Watch User (_stretch goal_) 
+        * Users with an existing relationship may be notified when:
+            * they create new projects
+            * they join projects
+            * they attend or host an event
+
+* __View a Profile__
+    * Users must be able to view profile details for other users 
+    * Profiles should show the number of projects done with a given skill  
+    * Profiles should showcase previous work as much as possible
+      (non-functional)
+    * Users must be able to contact other users 
+    * Email 
+
+* __Edit Profiles__
+    * Users must be able to edit their profiles 
+    * Users should give a "level" to their skills  
+    * Users should be able to make their profiles private (invite only) or
+      searchable
+
+* __Create a Profile__
+    * Users must be able to create their profile from the app 
+    * + all of "Edit Profiles"
+
+* __Manage Project Roles__
+    * Users will be able to add roles to their projects 
+    * Roles will contain 
+        * A name 
+        * Skills required to fill the role 
+        * A description of the role 
+    * Be able to be filled by a user 
+    * Users must be able to add other users to fill a role 
 
 ### Non-functional Requirements
 
@@ -289,9 +306,9 @@ be undertaken if primary goals are on schedule for completion in the required
 time frame.
 
 #### Data Export
-* Users should be able to export their project data (membership, contact
-  information, role assignments, shared files, communications logs) in an
-  accessible format should they desire to leave the service at any time
+Users should be able to export their project data (membership, contact
+information, role assignments, shared files, communications logs) in an
+accessible format should they desire to leave the service at any time
 
 #### Messaging 
 Users must be able to contact other users 
@@ -311,8 +328,8 @@ participants to join the project
 Follow other users, view their project participation 
 
 #### Achievements
-* An achievement system may be put in place to encourage user engagement
-  and increase retention; see [Mozilla OpenBadges](http://openbadges.org/)
+An achievement system may be put in place to encourage user engagement
+and increase retention; see [Mozilla OpenBadges](http://openbadges.org/)
 
 #### Project Management 
 1. Delegate Roles 
@@ -330,36 +347,55 @@ Follow other users, view their project participation
 
 #### Scenarios
 
-Scenario #1 
-A user is a new user to the application, so downloads the application to their Android device and runs the application. The first page asks the user to log in or create a new account, so the user creates a new account within the application with their email address and a password. The android device then locates the user’s GPS coordinates and adds them to the local users (the coordinates are updated each time the application is loaded).  
-After setting up a new account, the user is prompted to add specific information about research and development they have been involved in, along with personal interests and availability types (personal projects, business projects, research projects, remote projects, etc.). The user finishes the sign-up process and is able to access the next screen which gives the following options: 
-Create a Project 
-A user may post new ‘projects’ that are looking for certain experienced developers within the area that are interested in cross collaboration. The posting user automatically becomes the ‘project manager’ and can delegate that role to other users in the group. Posts are visible to users who have indicated experience in certain areas of development, and may be listed as paid or unpaid based on the posting user’s information. 
-Search For Project 
-A user may search for ‘projects’ in the local area that they have listed experience in one or more of the areas that the project covers. Users can send a private message to the ‘project manager’ and can be added to the ‘project team’ by the ‘project manager’ 
-Collaborate with project 
-Users can collaborate privately within a project 
-Post messages 
-Send group updates 
-Post files/pictures/etc 
-Manage Project (‘project manager’) 
-Update ‘Profile’ 
-Avatar 
-Interests 
-Skills 
-Collaborate with Community 
-Subgroups based on interests 
-Users can post similar to forum style, but designed for mobile 
-Allow users to ask and answer questions 
-Forum points (Achievements!) 
+##### Scenario #1: New User
+A user is a new user to the application, so downloads the application to their
+Android device and runs the application. The first page asks the user to log
+in or create a new account, so the user creates a new account within the
+application with their email address and a password. The android device then
+locates the user’s GPS coordinates and adds them to the local users (the
+coordinates are updated each time the application is loaded).
+
+After setting up a new account, the user is prompted to add specific
+information about research and development they have been involved in, along
+with personal interests and availability types (personal projects, business
+projects, research projects, remote projects, etc.). The user finishes the
+sign-up process and is able to access the next screen which gives the
+following options:
+
+1. Create a Project 
+    * A user may post new ‘projects’ that are looking for certain experienced
+      developers within the area that are interested in cross collaboration.
+      The posting user automatically becomes the ‘project manager’ and can
+      delegate that role to other users in the group. Posts are visible to
+      users who have indicated experience in certain areas of development, and
+      may be listed as paid or unpaid based on the posting user’s information.
+2. Search For Project 
+    * A user may search for ‘projects’ in the local area that they have listed
+      experience in one or more of the areas that the project covers. Users
+      can send a private message to the ‘project manager’ and can be added to
+      the ‘project team’ by the ‘project manager’
+3. Collaborate with project 
+    * Users can collaborate privately within a project 
+    * Post messages 
+    * Send group updates 
+    * Post files/pictures/etc 
+    * Manage Project (for Project Owners or delegates)
+4. Update profile
+    * Avatar 
+    * Interests 
+    * Skills 
+5. Collaborate with Community 
+    * Create and communicate with subgroups based on common interests 
+    * Users can post similar to forum style, but designed for mobile 
+    * Allow users to ask and answer questions 
+    * Forum points (Achievements) 
 
 #### Use Case Model
 
 ##### Primary Use Cases
-Create Profile 
+![Create a Profile Use Case](img/use_cases/create_profile.png)
 
 Create Project 
-
 
 Apply/Join Project 
 
@@ -582,6 +618,10 @@ Greg Franko,
 The PDF version of this document was created with John MacFarlane's
 [Pandoc](http://johnmacfarlane.net/pandoc/index.html) document processing
 system.
+
+* [Version 2 of Android profile UI](img/android_ui/profile_ui.png)
+* [Android project view UI](img/android_ui/project_ui.png)
+* [Android sidebar menu UI](img/android_ui/sidebar_ui.png)
 
 
 <!-- Vim modeline; please don't remove
