@@ -16,11 +16,12 @@ figcaption {
     font-size:90%;
     text-align:center;
 }
+/* And a bit of margin top and bottom */
+figure { margin:0.5em 0 1.5em; }
 
 /* Give some of the smaller headings room to breathe */
 h4, h5, h6 {
-    margin-top:1.5em;
-    margin-bottom:0.5em;
+    margin:1.5em 0 0.5em;
 }
 
 /* Don't add extra space for immediate subheads

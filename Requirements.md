@@ -1,5 +1,5 @@
 # TeamMachine
-### A Tool for Connected Collaboration
+## A Tool for Connected Collaboration
 
 ## Introduction
 In today's fast paced world, it can be very challenging to network and meet
@@ -45,7 +45,7 @@ The objectives of the TeamMachine project are to:
   certify individuals' skills and evaluate their suitability for collaboration
 * Provide basic groupware functions such as email discussion lists or live chat*
 
-\* _Stretch goals: only if primary functionality is implemented ahead of
+\*_Stretch goals: only if primary functionality is implemented ahead of
     schedule_
 
 ### References
@@ -562,8 +562,14 @@ Create Post
 9. Updated Date
 
 #### Dynamic Model
+TODO: Activity diagrams here.
 
 #### User Interface
+![Version 1 of Android profile and search UI](img/android_ui/profile_and_search_ui.png)
+
+* [Version 2 of Android profile UI](img/android_ui/profile_ui.png)
+* [Android project view UI](img/android_ui/project_ui.png)
+* [Android sidebar menu UI](img/android_ui/sidebar_ui.png)
 
 <!-- ## Glossary -->
 

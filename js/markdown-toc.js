@@ -48,6 +48,16 @@ $(function() {
                     $(this).wrap('<figure>');
                     $(this).after('<figcaption>' + $(this).prop('title') + '</figcaption>');
                 });
+               
+                // Create colorbox galleries for ul.gallery's:
+                $('ul > li > a').each(function() {
+                    $(this).colorbox({
+                        maxWidth:'100%',
+                        maxHeight:'100%',
+                        title:'Viewing \'' + $(this).text() + '.\' Press ESC to close.' 
+                    });
+                });
+                
                 
                 $("code").addClass("prettyprint");
                 prettyPrint();

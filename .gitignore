@@ -3,3 +3,4 @@
 .*.md.html
 .*.swp
 .settings/**
+.DS_Store
