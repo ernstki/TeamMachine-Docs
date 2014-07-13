@@ -1,5 +1,5 @@
 # TeamMachine
-## A Tool for Connected Collaboration
+### A Tool for Connected Collaboration
 
 ## Introduction
 In today's fast paced world, it can be very challenging to network and meet
@@ -396,7 +396,7 @@ Create Post
 
 #### Object Model
 
-![TeamMachine class diagram](img/class/solution_domain.png)
+![TeamMachine class overview diagram](img/class/solution_domain.png)
 
 ##### "Project" Object Fields
 |     Field Name         | Public/Private | Required |

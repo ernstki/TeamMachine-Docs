@@ -2,6 +2,40 @@ span#title {
 	display: inline-block;
 }
 
+/* Fit inline images within margins */
+a.popupimg img {
+    width:100%;
+    height:auto;
+}
+
+/* Give figures nice captions: */
+figcaption {
+    color: white;
+    background: black;
+    padding: 0.2em 0.5em;
+    font-size:90%;
+    text-align:center;
+}
+
+/* Give some of the smaller headings room to breathe */
+h4, h5, h6 {
+    margin-top:1.5em;
+    margin-bottom:0.5em;
+}
+
+/* Don't add extra space for immediate subheads
+   The <div> in between is something tocify.js does, I think.
+   Some of the smaller headings may be skipped, based on the value of
+   the 'selectors' option passed to tocify().
+*/
+h1 + div + h2,
+h2 + div + h3,
+h3 + div + h4,
+h4 + div + h5,
+h5 + div + h6 {
+    margin-top:0 !important;
+}
+
 li.tocify-item {
 	white-space: nowrap;
 	overflow: hidden;
@@ -71,8 +105,8 @@ tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows 
 	background-color: #eee;
 	}
 /* Odd and even rows */
-tr.odd {}
 tr.even {}
+tr.odd { background-color: #bebebe; }
  
 td, th /* Table cells and table header cells */
 	{
