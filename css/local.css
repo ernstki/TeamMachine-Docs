@@ -53,6 +53,17 @@ li.tocify-item {
 		margin-left:0;
 		margin-right:0;
 	}
+    /* Right-align the menu items when the navbar is in the small
+       screen view */
+    .nav > li {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .nav > li {
+        text-align: right;
+    }
 }
 
 /* Improve contrast of top nav when in not-"collapsed" state */
@@ -64,6 +75,8 @@ li.tocify-item {
 .navbar.navbar-fixed-top.top-nav-collapse {
     text-shadow: none;
 }
+
+
 
 /* ---- Tables ---- */
 /* Source: https://gist.github.com/ryangray/1882525 */
