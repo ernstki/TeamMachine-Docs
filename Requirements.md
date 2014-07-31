@@ -617,6 +617,16 @@ of the TeamMachine product._
 8. Creation Date
 9. Updated Date
 
+#### Back-end Database Schema
+Generated from Rails' `db/schema.rb` on 2014-07-31 using `uml_dumper.rb` by
+[Miroslav Skultety][uml-dumper], rendered in [StarUML][staruml].
+
+![Rails database schema](img/db/rails_db_schema.jpg)
+
+
+[uml-dumper]: http://blog.zmok.net/articles/2006/11/13/visualize-your-rails-schema
+[staruml]: http://staruml.sourceforge.net/en/index.php
+
 #### Dynamic Model
 ##### Overview
 ![Overview activity diagram](img/activity/act-overview.png)
